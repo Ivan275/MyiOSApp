@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DD7D2431FEB4D350034BEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */; };
+		2DD7D2451FEB4D350034BEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2441FEB4D350034BEC3 /* ViewController.swift */; };
+		2DD7D2481FEB4D350034BEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D2461FEB4D350034BEC3 /* Main.storyboard */; };
+		2DD7D24A1FEB4D350034BEC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D2491FEB4D350034BEC3 /* Assets.xcassets */; };
+		2DD7D24D1FEB4D350034BEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D24B1FEB4D350034BEC3 /* LaunchScreen.storyboard */; };
+		2DD7D2581FEB4D350034BEC3 /* QiChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2571FEB4D350034BEC3 /* QiChatTests.swift */; };
+		2DD7D2631FEB4D350034BEC3 /* QiChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2621FEB4D350034BEC3 /* QiChatUITests.swift */; };
+		2DD7D2711FEB6F2C0034BEC3 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */; };
+		2DD7D2731FEB751D0034BEC3 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2721FEB751D0034BEC3 /* PageModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DD7D2541FEB4D350034BEC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DD7D2371FEB4D350034BEC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DD7D23E1FEB4D350034BEC3;
+			remoteInfo = QiChat;
+		};
+		2DD7D25F1FEB4D350034BEC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DD7D2371FEB4D350034BEC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DD7D23E1FEB4D350034BEC3;
+			remoteInfo = QiChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DD7D23F1FEB4D350034BEC3 /* QiChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DD7D2441FEB4D350034BEC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DD7D2471FEB4D350034BEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DD7D2491FEB4D350034BEC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DD7D24C1FEB4D350034BEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DD7D24E1FEB4D350034BEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD7D2531FEB4D350034BEC3 /* QiChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7D2571FEB4D350034BEC3 /* QiChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiChatTests.swift; sourceTree = "<group>"; };
+		2DD7D2591FEB4D350034BEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD7D25E1FEB4D350034BEC3 /* QiChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD7D2621FEB4D350034BEC3 /* QiChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiChatUITests.swift; sourceTree = "<group>"; };
+		2DD7D2641FEB4D350034BEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		2DD7D2721FEB751D0034BEC3 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DD7D23C1FEB4D350034BEC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7D2501FEB4D350034BEC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7D25B1FEB4D350034BEC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DD7D2361FEB4D350034BEC3 = {
+			isa = PBXGroup;
+			children = (
+				2DD7D2411FEB4D350034BEC3 /* QiChat */,
+				2DD7D2561FEB4D350034BEC3 /* QiChatTests */,
+				2DD7D2611FEB4D350034BEC3 /* QiChatUITests */,
+				2DD7D2401FEB4D350034BEC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DD7D2401FEB4D350034BEC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7D23F1FEB4D350034BEC3 /* QiChat.app */,
+				2DD7D2531FEB4D350034BEC3 /* QiChatTests.xctest */,
+				2DD7D25E1FEB4D350034BEC3 /* QiChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DD7D2411FEB4D350034BEC3 /* QiChat */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */,
+				2DD7D2441FEB4D350034BEC3 /* ViewController.swift */,
+				2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */,
+				2DD7D2721FEB751D0034BEC3 /* PageModel.swift */,
+				2DD7D2461FEB4D350034BEC3 /* Main.storyboard */,
+				2DD7D2491FEB4D350034BEC3 /* Assets.xcassets */,
+				2DD7D24B1FEB4D350034BEC3 /* LaunchScreen.storyboard */,
+				2DD7D24E1FEB4D350034BEC3 /* Info.plist */,
+			);
+			path = QiChat;
+			sourceTree = "<group>";
+		};
+		2DD7D2561FEB4D350034BEC3 /* QiChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7D2571FEB4D350034BEC3 /* QiChatTests.swift */,
+				2DD7D2591FEB4D350034BEC3 /* Info.plist */,
+			);
+			path = QiChatTests;
+			sourceTree = "<group>";
+		};
+		2DD7D2611FEB4D350034BEC3 /* QiChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7D2621FEB4D350034BEC3 /* QiChatUITests.swift */,
+				2DD7D2641FEB4D350034BEC3 /* Info.plist */,
+			);
+			path = QiChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DD7D23E1FEB4D350034BEC3 /* QiChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD7D2671FEB4D350034BEC3 /* Build configuration list for PBXNativeTarget "QiChat" */;
+			buildPhases = (
+				2DD7D23B1FEB4D350034BEC3 /* Sources */,
+				2DD7D23C1FEB4D350034BEC3 /* Frameworks */,
+				2DD7D23D1FEB4D350034BEC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QiChat;
+			productName = QiChat;
+			productReference = 2DD7D23F1FEB4D350034BEC3 /* QiChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DD7D2521FEB4D350034BEC3 /* QiChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD7D26A1FEB4D350034BEC3 /* Build configuration list for PBXNativeTarget "QiChatTests" */;
+			buildPhases = (
+				2DD7D24F1FEB4D350034BEC3 /* Sources */,
+				2DD7D2501FEB4D350034BEC3 /* Frameworks */,
+				2DD7D2511FEB4D350034BEC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DD7D2551FEB4D350034BEC3 /* PBXTargetDependency */,
+			);
+			name = QiChatTests;
+			productName = QiChatTests;
+			productReference = 2DD7D2531FEB4D350034BEC3 /* QiChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DD7D25D1FEB4D350034BEC3 /* QiChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD7D26D1FEB4D350034BEC3 /* Build configuration list for PBXNativeTarget "QiChatUITests" */;
+			buildPhases = (
+				2DD7D25A1FEB4D350034BEC3 /* Sources */,
+				2DD7D25B1FEB4D350034BEC3 /* Frameworks */,
+				2DD7D25C1FEB4D350034BEC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DD7D2601FEB4D350034BEC3 /* PBXTargetDependency */,
+			);
+			name = QiChatUITests;
+			productName = QiChatUITests;
+			productReference = 2DD7D25E1FEB4D350034BEC3 /* QiChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DD7D2371FEB4D350034BEC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Qiqi He";
+				TargetAttributes = {
+					2DD7D23E1FEB4D350034BEC3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2DD7D2521FEB4D350034BEC3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2DD7D23E1FEB4D350034BEC3;
+					};
+					2DD7D25D1FEB4D350034BEC3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2DD7D23E1FEB4D350034BEC3;
+					};
+				};
+			};
+			buildConfigurationList = 2DD7D23A1FEB4D350034BEC3 /* Build configuration list for PBXProject "QiChat" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DD7D2361FEB4D350034BEC3;
+			productRefGroup = 2DD7D2401FEB4D350034BEC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DD7D23E1FEB4D350034BEC3 /* QiChat */,
+				2DD7D2521FEB4D350034BEC3 /* QiChatTests */,
+				2DD7D25D1FEB4D350034BEC3 /* QiChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DD7D23D1FEB4D350034BEC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7D24D1FEB4D350034BEC3 /* LaunchScreen.storyboard in Resources */,
+				2DD7D24A1FEB4D350034BEC3 /* Assets.xcassets in Resources */,
+				2DD7D2481FEB4D350034BEC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7D2511FEB4D350034BEC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7D25C1FEB4D350034BEC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DD7D23B1FEB4D350034BEC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7D2731FEB751D0034BEC3 /* PageModel.swift in Sources */,
+				2DD7D2451FEB4D350034BEC3 /* ViewController.swift in Sources */,
+				2DD7D2431FEB4D350034BEC3 /* AppDelegate.swift in Sources */,
+				2DD7D2711FEB6F2C0034BEC3 /* PageCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7D24F1FEB4D350034BEC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7D2581FEB4D350034BEC3 /* QiChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DD7D25A1FEB4D350034BEC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD7D2631FEB4D350034BEC3 /* QiChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DD7D2551FEB4D350034BEC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DD7D23E1FEB4D350034BEC3 /* QiChat */;
+			targetProxy = 2DD7D2541FEB4D350034BEC3 /* PBXContainerItemProxy */;
+		};
+		2DD7D2601FEB4D350034BEC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DD7D23E1FEB4D350034BEC3 /* QiChat */;
+			targetProxy = 2DD7D25F1FEB4D350034BEC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DD7D2461FEB4D350034BEC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DD7D2471FEB4D350034BEC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DD7D24B1FEB4D350034BEC3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DD7D24C1FEB4D350034BEC3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DD7D2651FEB4D350034BEC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DD7D2661FEB4D350034BEC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DD7D2681FEB4D350034BEC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25QF696XS8;
+				INFOPLIST_FILE = QiChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DreamPacers.QiChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DD7D2691FEB4D350034BEC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25QF696XS8;
+				INFOPLIST_FILE = QiChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DreamPacers.QiChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DD7D26B1FEB4D350034BEC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25QF696XS8;
+				INFOPLIST_FILE = QiChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DreamPacers.QiChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiChat.app/QiChat";
+			};
+			name = Debug;
+		};
+		2DD7D26C1FEB4D350034BEC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25QF696XS8;
+				INFOPLIST_FILE = QiChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DreamPacers.QiChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiChat.app/QiChat";
+			};
+			name = Release;
+		};
+		2DD7D26E1FEB4D350034BEC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25QF696XS8;
+				INFOPLIST_FILE = QiChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DreamPacers.QiChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QiChat;
+			};
+			name = Debug;
+		};
+		2DD7D26F1FEB4D350034BEC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25QF696XS8;
+				INFOPLIST_FILE = QiChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DreamPacers.QiChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QiChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DD7D23A1FEB4D350034BEC3 /* Build configuration list for PBXProject "QiChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7D2651FEB4D350034BEC3 /* Debug */,
+				2DD7D2661FEB4D350034BEC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DD7D2671FEB4D350034BEC3 /* Build configuration list for PBXNativeTarget "QiChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7D2681FEB4D350034BEC3 /* Debug */,
+				2DD7D2691FEB4D350034BEC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DD7D26A1FEB4D350034BEC3 /* Build configuration list for PBXNativeTarget "QiChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7D26B1FEB4D350034BEC3 /* Debug */,
+				2DD7D26C1FEB4D350034BEC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DD7D26D1FEB4D350034BEC3 /* Build configuration list for PBXNativeTarget "QiChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DD7D26E1FEB4D350034BEC3 /* Debug */,
+				2DD7D26F1FEB4D350034BEC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DD7D2371FEB4D350034BEC3 /* Project object */;
+}
