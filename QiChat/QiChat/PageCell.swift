@@ -13,7 +13,13 @@ class PageCell: UICollectionViewCell {
 	var page: PageModel? {
 		didSet {
 			guard let page = page else {return}
-			imageView.image = UIImage(named: page.imageName)
+			var imageName = page.imageName
+			if(UIDevice.current.orientation.isLandscape) {
+				print(123)
+				imageName = imageName + "_landscape"
+			}
+			
+			imageView.image = UIImage(named: imageName)
 			let attributeString = NSMutableAttributedString(string: page.title, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), NSAttributedStringKey.foregroundColor: UIColor(white: 0.2, alpha: 1)])
 //			textArea.text = page.title + "\n\n" + page.description
 			attributeString.append(NSAttributedString(string: "\n\n \(page.description)", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor(white: 0.2, alpha: 1)]))
@@ -31,7 +37,7 @@ class PageCell: UICollectionViewCell {
 		let iv = UIImageView()
 		iv.image = UIImage(named: "home")
 		iv.clipsToBounds = true
-		iv.contentMode = .scaleAspectFill
+		iv.contentMode = .scaleAspectFit
 		return iv
 	}()
 	
@@ -76,13 +82,13 @@ class PageCell: UICollectionViewCell {
 		textArea.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 		textArea.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
 		textArea.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16).isActive = true
-		textArea.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3).isActive = true
+		textArea.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4).isActive = true
 		
 		horizontalLine.translatesAutoresizingMaskIntoConstraints = false
 		horizontalLine.bottomAnchor.constraint(equalTo: textArea.topAnchor).isActive = true
 		horizontalLine.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
 		horizontalLine.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-		horizontalLine.heightAnchor.constraint(equalToConstant: 4).isActive = true
+		horizontalLine.heightAnchor.constraint(equalToConstant: 1).isActive = true
 		
 		
 		

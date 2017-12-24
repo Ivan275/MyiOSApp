@@ -16,6 +16,8 @@
 		2DD7D2631FEB4D350034BEC3 /* QiChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2621FEB4D350034BEC3 /* QiChatUITests.swift */; };
 		2DD7D2711FEB6F2C0034BEC3 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */; };
 		2DD7D2731FEB751D0034BEC3 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2721FEB751D0034BEC3 /* PageModel.swift */; };
+		2DD7D2751FEF0C1C0034BEC3 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2741FEF0C1C0034BEC3 /* LoginCell.swift */; };
+		2DD7D2771FEF39BB0034BEC3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2761FEF39BB0034BEC3 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		2DD7D2641FEB4D350034BEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		2DD7D2721FEB751D0034BEC3 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		2DD7D2741FEF0C1C0034BEC3 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		2DD7D2761FEF39BB0034BEC3 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */,
 				2DD7D2441FEB4D350034BEC3 /* ViewController.swift */,
+				2DD7D2761FEF39BB0034BEC3 /* MainController.swift */,
+				2DD7D2741FEF0C1C0034BEC3 /* LoginCell.swift */,
 				2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */,
 				2DD7D2721FEB751D0034BEC3 /* PageModel.swift */,
 				2DD7D2461FEB4D350034BEC3 /* Main.storyboard */,
@@ -267,7 +273,9 @@
 			files = (
 				2DD7D2731FEB751D0034BEC3 /* PageModel.swift in Sources */,
 				2DD7D2451FEB4D350034BEC3 /* ViewController.swift in Sources */,
+				2DD7D2751FEF0C1C0034BEC3 /* LoginCell.swift in Sources */,
 				2DD7D2431FEB4D350034BEC3 /* AppDelegate.swift in Sources */,
+				2DD7D2771FEF39BB0034BEC3 /* MainController.swift in Sources */,
 				2DD7D2711FEB6F2C0034BEC3 /* PageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
