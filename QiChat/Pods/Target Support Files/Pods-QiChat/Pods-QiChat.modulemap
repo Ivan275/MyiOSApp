@@ -1,0 +1,6 @@
+framework module Pods_QiChat {
+  umbrella header "Pods-QiChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
