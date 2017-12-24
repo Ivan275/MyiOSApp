@@ -70,14 +70,23 @@ class loginCell: UICollectionViewCell {
 		return password
 	}()
 	
-	let loginButton : UIButton = {
+	lazy var loginButton : UIButton = {
 		let button = UIButton(type: .system)
 		button.setTitle("Log in", for: .normal)
 		button.setTitleColor(.white, for: .normal)
 		button.backgroundColor = .orange
+		button.addTarget(self, action: #selector(clickLogin), for: .touchUpInside)
 		return button
 	}()
+	
+	weak var delegate : loginControllerDelegate?
+	@objc func clickLogin() {
+		delegate?.finishLogin()
+	}
+
 }
+
+
 
 class textField: UITextField {
 	override func textRect(forBounds bounds: CGRect) -> CGRect {

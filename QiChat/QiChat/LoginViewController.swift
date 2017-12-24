@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+protocol loginControllerDelegate : class {
+	func finishLogin()
+}
+
+class LoginViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,loginControllerDelegate{
 	
 	let cellId = "cellId"
 	let loginId = "loginId"
@@ -78,7 +82,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 		collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
 		
 		
-		pageConstraint = pageController.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+		pageConstraint = pageController.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
 		pageConstraint?.isActive = true
 		pageController.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		
@@ -89,7 +93,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 		nextConstraint = nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
 		nextConstraint?.isActive = true
 		nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15).isActive = true
-		
+//		view.bounds = CGRect(x: 0, y: 25, width: view.frame.width + 40, height: view.frame.height + 40)
 		collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
 		collectionView.register(loginCell.self, forCellWithReuseIdentifier: loginId)
 	}
@@ -102,6 +106,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //		if(pageController.currentPage == pages.count){
 //			disappearButtonsAndPageController()
 //		}
+		
+	}
+	
+	func finishLogin() {
+		let rootView = UIApplication.shared.keyWindow?.rootViewController
+		guard let mainNav = rootView as? MainController else { return }
+		
+		UserDefaults.standard.setLogin(value: true)
+		
+		mainNav.viewControllers = [HomeController()]
+		dismiss(animated: true, completion: nil)
 		
 	}
 	
@@ -163,6 +178,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 			return cell
 		}else{
 			let login = collectionView.dequeueReusableCell(withReuseIdentifier: loginId, for: indexPath) as! loginCell
+			login.delegate = self
 			return login
 		}
 	}
