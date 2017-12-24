@@ -11,20 +11,29 @@ import UIKit
 class MainController: UINavigationController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .red
+		view.backgroundColor = .white
 		
-		var isLogin = false
+//		let isLogin = false
 		
-		if isLogin { //login
-			
+		
+		if isLogin() { //login
+			let home = HomeController()
+			viewControllers = [home]
+		
 		} else { //not login
-			perform(#selector(showLogin), with: nil, afterDelay: 0.01)
+			perform(#selector(showLogin), with: nil, afterDelay: 0.001)
+
 		}
 	}
 	
 	@objc func showLogin() {
-		present(ViewController(), animated: true, completion: {
-			
+		present(LoginViewController(), animated: true, completion: {
 		})
 	}
+	
+	func isLogin() -> Bool {
+		return UserDefaults.standard.getLogin()
+	}
 }
+
+

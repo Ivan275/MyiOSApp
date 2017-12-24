@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D74B8DE1FF040180087C6CF /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B8DD1FF040180087C6CF /* HomeController.swift */; };
+		2D74B8E01FF041230087C6CF /* help+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B8DF1FF041230087C6CF /* help+extension.swift */; };
 		2DD7D2431FEB4D350034BEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */; };
-		2DD7D2451FEB4D350034BEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2441FEB4D350034BEC3 /* ViewController.swift */; };
+		2DD7D2451FEB4D350034BEC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2441FEB4D350034BEC3 /* LoginViewController.swift */; };
 		2DD7D2481FEB4D350034BEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D2461FEB4D350034BEC3 /* Main.storyboard */; };
 		2DD7D24A1FEB4D350034BEC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D2491FEB4D350034BEC3 /* Assets.xcassets */; };
 		2DD7D24D1FEB4D350034BEC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D24B1FEB4D350034BEC3 /* LaunchScreen.storyboard */; };
@@ -38,9 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D74B8DD1FF040180087C6CF /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		2D74B8DF1FF041230087C6CF /* help+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "help+extension.swift"; sourceTree = "<group>"; };
 		2DD7D23F1FEB4D350034BEC3 /* QiChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DD7D2441FEB4D350034BEC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DD7D2441FEB4D350034BEC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DD7D2471FEB4D350034BEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DD7D2491FEB4D350034BEC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DD7D24C1FEB4D350034BEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,12 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */,
-				2DD7D2441FEB4D350034BEC3 /* ViewController.swift */,
+				2D74B8DF1FF041230087C6CF /* help+extension.swift */,
+				2DD7D2441FEB4D350034BEC3 /* LoginViewController.swift */,
 				2DD7D2761FEF39BB0034BEC3 /* MainController.swift */,
 				2DD7D2741FEF0C1C0034BEC3 /* LoginCell.swift */,
 				2DD7D2701FEB6F2C0034BEC3 /* PageCell.swift */,
 				2DD7D2721FEB751D0034BEC3 /* PageModel.swift */,
 				2DD7D2461FEB4D350034BEC3 /* Main.storyboard */,
+				2D74B8DD1FF040180087C6CF /* HomeController.swift */,
 				2DD7D2491FEB4D350034BEC3 /* Assets.xcassets */,
 				2DD7D24B1FEB4D350034BEC3 /* LaunchScreen.storyboard */,
 				2DD7D24E1FEB4D350034BEC3 /* Info.plist */,
@@ -271,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D74B8E01FF041230087C6CF /* help+extension.swift in Sources */,
 				2DD7D2731FEB751D0034BEC3 /* PageModel.swift in Sources */,
-				2DD7D2451FEB4D350034BEC3 /* ViewController.swift in Sources */,
+				2DD7D2451FEB4D350034BEC3 /* LoginViewController.swift in Sources */,
+				2D74B8DE1FF040180087C6CF /* HomeController.swift in Sources */,
 				2DD7D2751FEF0C1C0034BEC3 /* LoginCell.swift in Sources */,
 				2DD7D2431FEB4D350034BEC3 /* AppDelegate.swift in Sources */,
 				2DD7D2771FEF39BB0034BEC3 /* MainController.swift in Sources */,
