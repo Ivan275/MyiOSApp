@@ -11,6 +11,8 @@ import UIKit
 class GalleryController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	let galleryId = "galleryId"
 	
+	var galleries : [GalleryCategory]?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.addSubview(collectionView)
@@ -20,9 +22,10 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 		collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
 		collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
 		collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-		
-		print("recent")
+
 		collectionView.register(GalleryCell.self, forCellWithReuseIdentifier: galleryId)
+		
+		galleries = GalleryCategory.setUpGallery()
 	}
 	
 	lazy var collectionView : UICollectionView = {
@@ -35,11 +38,15 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 	}()
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 4
+		if let counts = galleries?.count {
+			return counts
+		}
+		return 0
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryId, for: indexPath) as! GalleryCell
+		cell.category = galleries?[indexPath.item]
 		return cell
 	}
 	

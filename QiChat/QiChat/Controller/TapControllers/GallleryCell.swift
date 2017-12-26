@@ -31,14 +31,23 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 //		latestImageCollectionView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
 //		latestImageCollectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive	= true
 
-		latestImageCollectionView.register(TopImageCell.self, forCellWithReuseIdentifier: "topcell")
-		
+		latestImageCollectionView.register(ImageCell.self, forCellWithReuseIdentifier: "topcell")
+	
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	var category : GalleryCategory? {
+		didSet{
+			if let title = category?.categoryName {
+				titleName.text = title
+			}
+		}
+	}
+	
+
 	lazy var latestImageCollectionView : UICollectionView = {
 		let layOut = UICollectionViewFlowLayout()
 		layOut.scrollDirection = .horizontal
@@ -57,7 +66,7 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 		return sl
 	}()
 	
-	let titleName : UILabel = {
+	var titleName : UILabel = {
 		let name = UILabel()
 		name.text = "Latest"
 		name.font = UIFont.boldSystemFont(ofSize: 14)
@@ -66,11 +75,15 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 	}()
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 4
+		if let counts = category?.gallery.count {
+			return counts
+		}
+		return 0
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topcell", for: indexPath) as! TopImageCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topcell", for: indexPath) as! ImageCell
+		cell.images = category?.gallery[indexPath.item]
 		return cell
 	}
 	
@@ -85,19 +98,19 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 	
 }
 
-class TopImageCell: UICollectionViewCell {
+class ImageCell: UICollectionViewCell {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 //		backgroundColor = .green
 		addSubview(imageView)
 		addSubview(imageName)
 		addSubview(userName)
-		addSubview(date)
+		addSubview(dateString)
 		
 		imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
 		imageName.frame = CGRect(x: 0, y: frame.width + 2, width:  frame.width, height: 40)
 		userName.frame = CGRect(x: 0, y: frame.width + 40, width:  frame.width, height: 20)
-		date.frame = CGRect(x: 0, y: frame.width + 54, width:  frame.width, height: 20)
+		dateString.frame = CGRect(x: 0, y: frame.width + 54, width:  frame.width, height: 20)
 //		imageName.translatesAutoresizingMaskIntoConstraints = false
 //
 //		imageName.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
@@ -106,6 +119,17 @@ class TopImageCell: UICollectionViewCell {
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
+	
+	var images : ImageGallery? {
+		didSet{
+			if let name = images?.imageName, let user = images?.authorName, let date = images?.dateString{
+				imageName.text = name
+				userName.text = user
+				dateString.text = date
+			}
+		}
+	}
+	
 	let imageView : UIImageView = {
 		let iv = UIImageView()
 		iv.image = UIImage(named:"card")
@@ -115,7 +139,7 @@ class TopImageCell: UICollectionViewCell {
 		return iv
 	}()
 	
-	let imageName : UILabel = {
+	var imageName : UILabel = {
 		let name = UILabel()
 		name.text = "Art of Life and human of Life "
 		name.font = UIFont.systemFont(ofSize: 12)
@@ -132,7 +156,7 @@ class TopImageCell: UICollectionViewCell {
 		return name
 	}()
 	
-	let date : UILabel = {
+	let dateString : UILabel = {
 		var mydate = UILabel()
 		let date = NSDate() // Get Todays Date
 		let dateFormatter = DateFormatter()

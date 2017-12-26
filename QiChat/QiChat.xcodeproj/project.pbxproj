@@ -13,6 +13,7 @@
 		2D74B8E91FF082E10087C6CF /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B8E81FF082E10087C6CF /* ContactController.swift */; };
 		2D74B8EC1FF088590087C6CF /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B8EB1FF088590087C6CF /* SettingController.swift */; };
 		2D74B8EE1FF0A0090087C6CF /* GallleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74B8ED1FF0A0090087C6CF /* GallleryCell.swift */; };
+		2DBB35201FF1B64600942EFA /* GalleryCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB351F1FF1B64600942EFA /* GalleryCategoryModel.swift */; };
 		2DD7D2431FEB4D350034BEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */; };
 		2DD7D2451FEB4D350034BEC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7D2441FEB4D350034BEC3 /* LoginViewController.swift */; };
 		2DD7D2481FEB4D350034BEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD7D2461FEB4D350034BEC3 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		2D74B8E81FF082E10087C6CF /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		2D74B8EB1FF088590087C6CF /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		2D74B8ED1FF0A0090087C6CF /* GallleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallleryCell.swift; sourceTree = "<group>"; };
+		2DBB351F1FF1B64600942EFA /* GalleryCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCategoryModel.swift; sourceTree = "<group>"; };
 		2DD7D23F1FEB4D350034BEC3 /* QiChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD7D2421FEB4D350034BEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD7D2441FEB4D350034BEC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				2D74B8E61FF07E1A0087C6CF /* GalleryController.swift */,
 				2D74B8ED1FF0A0090087C6CF /* GallleryCell.swift */,
+				2DBB351F1FF1B64600942EFA /* GalleryCategoryModel.swift */,
 				2D74B8E81FF082E10087C6CF /* ContactController.swift */,
 				2D74B8EB1FF088590087C6CF /* SettingController.swift */,
 			);
@@ -541,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBB35201FF1B64600942EFA /* GalleryCategoryModel.swift in Sources */,
 				2D74B8E01FF041230087C6CF /* help+extension.swift in Sources */,
 				2D74B8EE1FF0A0090087C6CF /* GallleryCell.swift in Sources */,
 				2DD7D2731FEB751D0034BEC3 /* PageModel.swift in Sources */,
