@@ -10,6 +10,8 @@ target 'QiChat' do
 pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
   target 'QiChatTests' do
     inherit! :search_paths
