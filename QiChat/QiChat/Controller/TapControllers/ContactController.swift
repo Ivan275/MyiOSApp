@@ -8,11 +8,35 @@
 
 import UIKit
 
-class ContactController: UIViewController {
+class ContactController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
+	let cellId = "cellId"
+	let names : [String] = ["Ivan He", "Kevin Chan", "Adam D"]
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .yellow
-		print("contact")
+		view.addSubview(tableView)
+		tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+		tableView.delegate = self
+		tableView.dataSource = self
+		
 	}
+	
+	let tableView : UITableView = {
+		let tv = UITableView()
+		return tv
+	}()
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return names.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		var row = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+ 		row.textLabel?.text = names[indexPath.row]
+		return row
+	}
+	
 }
 

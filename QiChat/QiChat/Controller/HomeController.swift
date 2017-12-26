@@ -16,7 +16,7 @@ class HomeController: UITabBarController {
 	var setting : SettingController?
 	
 	var subViewController: [UIViewController] = []
-	
+	var user : String?
 	override func viewDidLoad() {
 		super.viewDidLoad()
 //		view.backgroundColor = .blue
@@ -44,6 +44,25 @@ class HomeController: UITabBarController {
 		self.setViewControllers(subViewController, animated: true)
 		self.selectedIndex = 0
 		self.selectedViewController = gallery
+		
+		getFacebookInfo { (userName) in
+			self.user = userName
+//			self.navigationItem.leftBarButtonItem?.title = userName
+			UserDefaults.standard.set(userName, forKey: "UserName")
+			
+		}
+		setup()
+	}
+	func setup() {
+		guard let user = UserDefaults.standard.string(forKey: "UserName") else {
+			return
+		}
+		navigationItem.rightBarButtonItem =  UIBarButtonItem(title: user, style: .plain, target: self, action: #selector(userInfo))
+		
+	}
+
+	@objc func userInfo() {
+		print("this is user info")
 	}
 	
 	override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -57,6 +76,28 @@ class HomeController: UITabBarController {
 		default:
 			navigationItem.title = "Home"
 		}
+	}
+	
+	
+	
+	func getFacebookInfo(completion:@escaping ( _ result: String) -> ()) {
+		
+		FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
+			if err != nil {
+				print("Failed to get data")
+			}
+			
+			guard let res = result as? NSDictionary else { return }
+			if let name = res["name"] as? String{
+				
+					completion(name)
+				
+				
+			}
+			
+		}
+//		print(userName)
+		
 	}
 	
 	@objc func handleSignOut() {

@@ -52,6 +52,7 @@ class loginCell: UICollectionViewCell,FBSDKLoginButtonDelegate {
 		fbloginButton.heightAnchor.constraint(equalToConstant: 150).isActive = true
 		
 		fbloginButton.delegate = self
+//		fbloginButton.readPermissions = ["email", "public_profile"]
 		
 	}
 	
@@ -108,6 +109,7 @@ class loginCell: UICollectionViewCell,FBSDKLoginButtonDelegate {
 		delegate?.finishLogin()
 		print("login successfully")
 	}
+	
 
 }
 

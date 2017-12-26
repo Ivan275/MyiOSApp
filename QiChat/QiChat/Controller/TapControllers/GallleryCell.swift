@@ -12,20 +12,15 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-//		backgroundColor = .black
 		
 		addSubview(latestImageCollectionView)
 		addSubview(separateLine)
 		addSubview(titleName)
 		
-		
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-15-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": separateLine]))
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-15-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": titleName]))
-	
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": latestImageCollectionView]))
-
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[title(25)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": latestImageCollectionView, "v1": separateLine, "title": titleName]))
-//
 //		latestImageCollectionView.topAnchor.constraint(equalTo: topAnchor).isActive	= true
 //		latestImageCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 //		latestImageCollectionView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
@@ -47,7 +42,6 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 		}
 	}
 	
-
 	lazy var latestImageCollectionView : UICollectionView = {
 		let layOut = UICollectionViewFlowLayout()
 		layOut.scrollDirection = .horizontal
@@ -88,20 +82,19 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: 100, height: frame.height)
+		return CGSize(width: 90, height: frame.height)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-		return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+		return UIEdgeInsets(top: 30, left: 15, bottom: 0, right: 15)
 	}
-	
 	
 }
 
 class ImageCell: UICollectionViewCell {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-//		backgroundColor = .green
+		
 		addSubview(imageView)
 		addSubview(imageName)
 		addSubview(userName)
@@ -112,7 +105,6 @@ class ImageCell: UICollectionViewCell {
 		userName.frame = CGRect(x: 0, y: frame.width + 40, width:  frame.width, height: 20)
 		dateString.frame = CGRect(x: 0, y: frame.width + 54, width:  frame.width, height: 20)
 //		imageName.translatesAutoresizingMaskIntoConstraints = false
-//
 //		imageName.topAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
 	}
 	
@@ -122,7 +114,8 @@ class ImageCell: UICollectionViewCell {
 	
 	var images : ImageGallery? {
 		didSet{
-			if let name = images?.imageName, let user = images?.authorName, let date = images?.dateString{
+			if let image = images?.imageName, let name = images?.titleName, let user = images?.authorName, let date = images?.dateString{
+				imageView.image = UIImage(named: image)
 				imageName.text = name
 				userName.text = user
 				dateString.text = date
