@@ -10,6 +10,7 @@ import UIKit
 
 class GalleryController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	let galleryId = "galleryId"
+	let bigGalleryId = "bigGalleryId"
 	
 	var galleries : [GalleryCategory]?
 	
@@ -24,7 +25,7 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 		collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
 
 		collectionView.register(GalleryCell.self, forCellWithReuseIdentifier: galleryId)
-		
+		collectionView.register(BigImageCell.self, forCellWithReuseIdentifier: bigGalleryId)
 		galleries = GalleryCategory.setUpGallery()
 	}
 	
@@ -37,6 +38,13 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 		return cv
 	}()
 	
+	
+	
+	func selectedImageDetail(Image: ImageGallery) {
+		let cv = UIViewController()
+		navigationController?.pushViewController(cv, animated: true)
+	}
+	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		if let counts = galleries?.count {
 			return counts
@@ -45,15 +53,31 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		if(indexPath.item == 1) {
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bigGalleryId, for: indexPath) as! BigImageCell
+			cell.category = galleries?[indexPath.item]
+			cell.gallery = self
+			return cell
+		}
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryId, for: indexPath) as! GalleryCell
 		cell.category = galleries?[indexPath.item]
+		cell.gallery = self
 		return cell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		if(indexPath.item == 1) {
+			return CGSize(width: view.frame.width, height: 230)
+		}
 		return CGSize(width: view.frame.width, height: 200)
 	}
 	
 }
 
+class BigImageCell: GalleryCell {
+	
+	override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: 120, height: frame.height)
+	}
+}
 

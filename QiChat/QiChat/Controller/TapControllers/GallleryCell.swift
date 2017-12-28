@@ -68,6 +68,8 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 		return name
 	}()
 	
+	var gallery: GalleryController?
+	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		if let counts = category?.gallery.count {
 			return counts
@@ -81,7 +83,18 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 		return cell
 	}
 	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if let image = category?.gallery[indexPath.item] {
+			gallery?.selectedImageDetail(Image: image)
+		}
+		
+		
+	}
+	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//		if(indexPath.item == 1) {
+//			return CGSize(width: 120, height: frame.height)
+//		}
 		return CGSize(width: 90, height: frame.height)
 	}
 	

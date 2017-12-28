@@ -33,7 +33,7 @@ class ContactController: UIViewController, UITableViewDataSource, UITableViewDel
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		var row = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+		let row = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
  		row.textLabel?.text = names[indexPath.row]
 		return row
 	}
