@@ -167,6 +167,9 @@ override func viewDidLoad() {
 	self.setViewControllers(subViewController, animated: true)
 
 ```
+![alt text](http://www.dreampacers.com/wp-content/uploads/2017/12/home.png)
+
+
 
 ## Authors
 
