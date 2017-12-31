@@ -41,7 +41,9 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 	
 	
 	func selectedImageDetail(Image: ImageGallery) {
-		let cv = UIViewController()
+		let layout = UICollectionViewFlowLayout()
+		let cv = DetailImageController(collectionViewLayout: layout)
+		cv.Image = Image
 		navigationController?.pushViewController(cv, animated: true)
 	}
 	
