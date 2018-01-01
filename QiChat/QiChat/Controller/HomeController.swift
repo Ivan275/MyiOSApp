@@ -13,6 +13,7 @@ class HomeController: UITabBarController {
 	
 	var gallery : GalleryController?
 	var contact : ContactController?
+	var upload  : UploadController?
 	var setting : SettingController?
 	
 	var subViewController: [UIViewController] = []
@@ -26,20 +27,24 @@ class HomeController: UITabBarController {
 		gallery = GalleryController()
 		contact = ContactController()
 		setting = SettingController()
+		upload  = UploadController()
 		
-		guard let gallery = gallery, let contact = contact, let setting = setting else {return}
+		guard let gallery = gallery, let contact = contact, let setting = setting, let upload = upload  else {return}
 		
 		subViewController.append(gallery)
 		subViewController.append(contact)
+		subViewController.append(upload)
 		subViewController.append(setting)
 		
-		gallery.tabBarItem = UITabBarItem(title: "Recent", image: #imageLiteral(resourceName: "recent"), selectedImage: #imageLiteral(resourceName: "recent"))
+		gallery.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "recent"), selectedImage: #imageLiteral(resourceName: "recent"))
 		contact.tabBarItem = UITabBarItem(title: "Contact", image: #imageLiteral(resourceName: "groups"), selectedImage: #imageLiteral(resourceName: "groups"))
+		upload.tabBarItem = UITabBarItem(title: "Upload", image: #imageLiteral(resourceName: "upload"), selectedImage: #imageLiteral(resourceName: "upload"))
 		setting.tabBarItem = UITabBarItem(title: "Setting", image: #imageLiteral(resourceName: "setting"), selectedImage: #imageLiteral(resourceName: "setting"))
 	
 		gallery.tabBarItem.tag = 0
 		contact.tabBarItem.tag = 1
-		setting.tabBarItem.tag = 2
+		upload.tabBarItem.tag  = 2
+		setting.tabBarItem.tag = 3
 
 		self.setViewControllers(subViewController, animated: true)
 		self.selectedIndex = 0
@@ -70,8 +75,10 @@ class HomeController: UITabBarController {
 		case 0 :
 			navigationItem.title = "Home"
 		case 1 :
-			navigationItem.title = "Recent"
+			navigationItem.title = "Contact"
 		case 2 :
+			navigationItem.title = "Upload"
+		case 3 :
 			navigationItem.title = "Setting"
 		default:
 			navigationItem.title = "Home"
