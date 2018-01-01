@@ -17,7 +17,6 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.addSubview(collectionView)
-		
 		collectionView.translatesAutoresizingMaskIntoConstraints = false
 		collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
 		collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true

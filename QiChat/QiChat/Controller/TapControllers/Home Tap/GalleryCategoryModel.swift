@@ -51,7 +51,15 @@ struct GalleryCategory {
 		let topImage6 = ImageGallery(id: 6, imageName: "p6", titleName: "The Most Greatest Artwork 6", authorName: "John Wu-Tzanq Liaw", dateString: "2015-5-1")
 		let topImage7 = ImageGallery(id: 7, imageName: "p7", titleName: "The Most Greatest Artwork 7", authorName: "John Wu-Tzanq Liaw", dateString: "2016-6-1")
 		let topImage8 = ImageGallery(id: 8, imageName: "p8", titleName: "The Most Greatest Artwork 8", authorName: "John Wu-Tzanq Liaw", dateString: "2017-7-1")
-		return [topImage1,topImage2,topImage3,topImage4,topImage5,topImage6,topImage7,topImage8]
+		let topImage9 = ImageGallery(id: 9, imageName: "p9", titleName: "The Most Greatest Artwork 1", authorName: "John Wu-Tzanq Liawe", dateString: "2010-1-1")
+		let topImage10 = ImageGallery(id: 10, imageName: "p10", titleName: "The Most Greatest Artwork 2", authorName: "John Wu-Tzanq Liaw", dateString: "2011-1-1")
+		let topImage11 = ImageGallery(id: 11, imageName: "p3", titleName: "The Most Greatest Artwork 3", authorName: "John Wu-Tzanq Liaw", dateString: "2012-2-1")
+		let topImage12 = ImageGallery(id: 12, imageName: "p4", titleName: "The Most Greatest Artwork 4", authorName: "John Wu-Tzanq Liaw", dateString: "2013-3-1")
+		let topImage13 = ImageGallery(id: 13, imageName: "p5", titleName: "The Most Greatest Artwork 5", authorName: "John Wu-Tzanq Liaw", dateString: "2014-4-1")
+		let topImage14 = ImageGallery(id: 14, imageName: "p6", titleName: "The Most Greatest Artwork 6", authorName: "John Wu-Tzanq Liaw", dateString: "2015-5-1")
+		let topImage15 = ImageGallery(id: 15, imageName: "p7", titleName: "The Most Greatest Artwork 7", authorName: "John Wu-Tzanq Liaw", dateString: "2016-6-1")
+		let topImage16 = ImageGallery(id: 16, imageName: "p8", titleName: "The Most Greatest Artwork 8", authorName: "John Wu-Tzanq Liaw", dateString: "2017-7-1")
+		return [topImage1,topImage2,topImage3,topImage4,topImage5,topImage6,topImage7,topImage8,topImage9,topImage10,topImage11,topImage12,topImage13,topImage14,topImage15,topImage16]
 	}
 }
 

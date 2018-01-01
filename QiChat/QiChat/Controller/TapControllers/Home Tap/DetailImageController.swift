@@ -24,6 +24,7 @@ class DetailImageController : UICollectionViewController, UICollectionViewDelega
 	private let descriptionId = "descriptionId"
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		collectionView?.alwaysBounceVertical = true
 		collectionView?.backgroundColor = .white
 		collectionView?.register(DetailImageCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: cellId)
 		collectionView?.register(DetailScrollImageCell.self, forCellWithReuseIdentifier: scrollCellId)
@@ -52,7 +53,7 @@ class DetailImageController : UICollectionViewController, UICollectionViewDelega
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: view.frame.width, height: 150)
+		return CGSize(width: view.frame.width, height: 200)
 	}
 }
 

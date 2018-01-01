@@ -107,10 +107,16 @@ class DescriptionCell: UICollectionViewCell {
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":lineView]))
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v1(100)]-8-[v0]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":textView, "v1": userImage]))
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-60-[v0]-60-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":segmentedControl]))
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":descriptionView]))
+//		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":descriptionView]))
 		
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1(1)]-8-[v0(100)]-8-[v2(30)]-8-[v3(200)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":userImage, "v1": lineView, "v2": segmentedControl, "v3": descriptionView]))
+		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1(1)]-8-[v0(100)]-8-[v2(30)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":userImage, "v1": lineView, "v2": segmentedControl]))
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-60-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":textView]))
+		
+		descriptionView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8).isActive = true
+		descriptionView.heightAnchor.constraint(equalToConstant: 130).isActive = true
+		descriptionView.widthAnchor.constraint(equalTo: widthAnchor, constant: 8).isActive = true
+		
+//		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-200-[v0(50)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": descriptionView]))
 	
 //		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0(30)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":segmentedControl]))
 	}
