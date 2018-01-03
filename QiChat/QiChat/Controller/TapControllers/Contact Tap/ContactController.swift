@@ -69,7 +69,7 @@ class ContactCell: UITableViewCell {
 		
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-15-[v0(50)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": contactImage]))
 		
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[v0(15)]-4-[v1]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": personName, "v1": message]))
+		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-18-[v0(25)][v1]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": personName, "v1": message]))
 		
 	}
 	
@@ -101,6 +101,7 @@ class ContactCell: UITableViewCell {
 	let personName: UILabel = {
 		let pn = UILabel()
 		pn.text = "test"
+		pn.lineBreakMode = .byCharWrapping
 		pn.font = UIFont.boldSystemFont(ofSize: 20)
 		return pn
 	}()
@@ -108,6 +109,7 @@ class ContactCell: UITableViewCell {
 	let message: UITextView = {
 		let message = UITextView()
 		message.isEditable = false
+		message.isScrollEnabled = false
 		message.text = "How is going so far? Talk you later."
 		message.textColor = UIColor(white: 0.6, alpha: 1)
 		return message
@@ -121,11 +123,11 @@ struct ContactModel {
 	let message: String
 	
 	static func setUpImage() -> [ContactModel] {
-		let firstImage = ContactModel(id: 1, username: "Jeff Bezos", imageName: "contact1", message: "I love Amazon, Talk you later.")
-		let secondImage = ContactModel(id: 2, username: "Jack Ma", imageName: "contact2", message: "How is going so far? I love Alibaba")
-		let thirdImage = ContactModel(id: 3, username: "Tim Cook", imageName: "contact3", message: "Are you free to talk, I have a new iPhone")
-		let firthImage = ContactModel(id: 4, username: "Elon Musk", imageName: "contact4", message: "Rocket, Rocket, It is my dream")
-		let fifthImage = ContactModel(id: 5, username: "Ivan He", imageName: "contact5", message: "I saw you today, buddy")
+		let firstImage = ContactModel(id: 1, username: "Elephant", imageName: "contact1", message: "I love Amazon, Talk you later.")
+		let secondImage = ContactModel(id: 2, username: "Monkey", imageName: "contact2", message: "How is going so far? I love Alibaba")
+		let thirdImage = ContactModel(id: 3, username: "Peafowl", imageName: "contact3", message: "Are you free to talk, I have a new iPhone")
+		let firthImage = ContactModel(id: 4, username: "Snake", imageName: "contact4", message: "Rocket, Rocket, It is my dream")
+		let fifthImage = ContactModel(id: 5, username: "Penguin", imageName: "contact5", message: "I saw you today, buddy")
 		return [firstImage, secondImage, thirdImage, firthImage, fifthImage]
 	}
 }

@@ -30,9 +30,9 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
 	}()
 	
 	let pages : [PageModel] = {
-		let firstPage = PageModel(imageName: "home", title: "This is title1", description: "this is my description, hello world1his is my description, hello world1his is my description, hello world1")
-		let secondPage = PageModel(imageName: "home2", title: "This is title2", description: "this is my description, hello world2his is my description, hello world1his is my description, hello world1his is my description, hello world1")
-		let thirdPage = PageModel(imageName: "home3", title: "This is title3", description: "this is my description, hello world3his is my description, hello world1his is my description, hello world1his is my description, hello world1")
+		let firstPage = PageModel(imageName: "home", title: "Steve Jobs", description: "Design is not just what it looks like and feels like. Design is how it works.")
+		let secondPage = PageModel(imageName: "home2", title: "Elon Musk", description: "We all worked 20 hours a day, and he worked 23 hours.")
+		let thirdPage = PageModel(imageName: "home3", title: "Mark Zuckerberg", description: "By giving people the power to share, we're making the world more transparent.")
 		return [firstPage,secondPage,thirdPage]
 	}()
 	
@@ -123,8 +123,8 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
 	private func disappearButtonsAndPageController() {
 		if(pageController.currentPage == pages.count) {
 			pageConstraint?.constant = 30
-			skipConstraint?.constant = -30
-			nextConstraint?.constant = 30
+			skipConstraint?.constant = -35
+			nextConstraint?.constant = 35
 		} else {
 			pageConstraint?.constant = 0
 			skipConstraint?.constant = 20
