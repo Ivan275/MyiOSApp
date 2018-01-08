@@ -46,7 +46,9 @@ class ContactController: UIViewController, UITableViewDataSource, UITableViewDel
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let selectedUser = contactsList?[indexPath.item]
 		let messageDetail = MessageDetailController()
+		messageDetail.selectedUser = selectedUser
 		navigationController?.pushViewController(messageDetail, animated: true)
 	}
 	
@@ -65,7 +67,7 @@ class ContactCell: UITableViewCell {
 		message.translatesAutoresizingMaskIntoConstraints = false
 		
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0(50)]-8-[v1]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": contactImage, "v1": personName]))
-		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[v0(341)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": message]))
+		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-65-[v0(280)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": message]))
 		
 		addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-15-[v0(50)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": contactImage]))
 		
@@ -112,6 +114,7 @@ class ContactCell: UITableViewCell {
 		message.isScrollEnabled = false
 		message.text = "How is going so far? Talk you later."
 		message.textColor = UIColor(white: 0.6, alpha: 1)
+		message.backgroundColor = UIColor.clear
 		return message
 	}()
 }

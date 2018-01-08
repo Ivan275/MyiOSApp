@@ -68,7 +68,7 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 		return name
 	}()
 	
-	var gallery: GalleryController?
+	var myGallery: GalleryController?
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		if let counts = category?.gallery.count {
@@ -85,7 +85,7 @@ class GalleryCell: UICollectionViewCell,UICollectionViewDelegate,UICollectionVie
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let image = category?.gallery[indexPath.item] {
-			gallery?.selectedImageDetail(Image: image)
+			myGallery?.selectedImageDetail(Image: image)
 		}
 		
 		

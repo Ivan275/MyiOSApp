@@ -57,12 +57,12 @@ class GalleryController: UIViewController, UICollectionViewDelegate, UICollectio
 		if(indexPath.item == 1) {
 			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bigGalleryId, for: indexPath) as! BigImageCell
 			cell.category = galleries?[indexPath.item]
-			cell.gallery = self
+			cell.myGallery = self
 			return cell
 		}
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryId, for: indexPath) as! GalleryCell
 		cell.category = galleries?[indexPath.item]
-		cell.gallery = self
+		cell.myGallery = self
 		return cell
 	}
 	

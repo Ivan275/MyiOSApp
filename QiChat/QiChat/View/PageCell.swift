@@ -15,7 +15,6 @@ class PageCell: UICollectionViewCell {
 			guard let page = page else {return}
 			var imageName = page.imageName
 			if(UIDevice.current.orientation.isLandscape) {
-				print(123)
 				imageName = imageName + "_landscape"
 			}
 			

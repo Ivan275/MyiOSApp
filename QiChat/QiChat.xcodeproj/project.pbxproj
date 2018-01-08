@@ -171,10 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				2D74B8E61FF07E1A0087C6CF /* GalleryController.swift */,
-				2DBB35211FF86C8100942EFA /* DetailImageController.swift */,
-				2DBB35231FF87AA900942EFA /* DetailScrollImageCell.swift */,
 				2D74B8ED1FF0A0090087C6CF /* GallleryCell.swift */,
 				2DBB351F1FF1B64600942EFA /* GalleryCategoryModel.swift */,
+				2DBB35211FF86C8100942EFA /* DetailImageController.swift */,
+				2DBB35231FF87AA900942EFA /* DetailScrollImageCell.swift */,
 			);
 			path = "Home Tap";
 			sourceTree = "<group>";
